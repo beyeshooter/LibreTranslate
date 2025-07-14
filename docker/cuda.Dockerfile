@@ -45,4 +45,4 @@ RUN pip3 install Babel==2.12.1 && python3 scripts/compile_locales.py \
 
 EXPOSE 5000
 # ENTRYPOINT [ "gunicorn", "--bind", "0.0.0.0:5000", "wsgi:app" ]
-ENTRYPOINT [ "gunicorn", "--bind", "0.0.0.0:5000", "wsgi:app('update_models=True,load_only=fr,en')"]
+ENTRYPOINT [ "gunicorn", "--bind", "0.0.0.0:5000", "wsgi:app(update_models=True)"]
